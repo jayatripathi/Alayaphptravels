@@ -1,0 +1,14 @@
+phpTravels/pageObjects/HomePage.class
+phpTravels/stepDefinitions/FlightSearchStepDefinitionsNew.class
+phpTravels/stepDefinitions/LogInStepDefinitionsNew.class
+phpTravels/stepDefinitions/HomeStepDefinitionsNew.class
+phpTravels/pageObjects/HotelsSearchResultPage.class
+phpTravels/stepDefinitions/HotelSearchStepDefinitionsNew.class
+phpTravels/pageObjects/FlightSearchPage.class
+phpTravels/pageObjects/MyAccountPage.class
+phpTravels/testRunner/TestRunner.class
+phpTravels/stepDefinitions/ServiceHooksNew.class
+phpTravels/pageObjects/HotelSearchPage.class
+phpTravels/pageObjects/FlightSearchResultPage.class
+phpTravels/testBase/TestBaseNew.class
+phpTravels/pageObjects/LogInPage.class

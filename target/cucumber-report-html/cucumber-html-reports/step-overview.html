@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>phpTravels</td>
+                          <td>1</td>
+                        <td>14 Feb 2019, 16:47</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_click_on_FLIGHTS_button()</td>
+                <td>3</td>
+                <td class="duration" data-value="5785449190">5s 785ms</td>
+                <td class="duration" data-value="1928483063">1s 928ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_click_on_FLIGHTS_option_in_the_search_table()</td>
+                <td>3</td>
+                <td class="duration" data-value="930200819">930ms</td>
+                <td class="duration" data-value="310066939">310ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_click_on_Search_button_for_flights()</td>
+                <td>3</td>
+                <td class="duration" data-value="620823214">620ms</td>
+                <td class="duration" data-value="206941071">206ms</td>
+                <td class="failed">66.67%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_enter_departure_date(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="440295309">440ms</td>
+                <td class="duration" data-value="220147654">220ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_enter_destination_city(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="14496335989">14s 496ms</td>
+                <td class="duration" data-value="14496335989">14s 496ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_enter_from_city(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5074227369">5s 074ms</td>
+                <td class="duration" data-value="5074227369">5s 074ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_enter_return_date(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_see_FLIGHTS_page()</td>
+                <td>3</td>
+                <td class="duration" data-value="612904893">612ms</td>
+                <td class="duration" data-value="204301631">204ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_see_FLIGHTS_search_results_on_FLIGHTS_search_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_see_error_message_to_fill_mandatory_checkInDate_fields()</td>
+                <td>1</td>
+                <td class="duration" data-value="4589331249">4s 589ms</td>
+                <td class="duration" data-value="4589331249">4s 589ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_see_error_message_to_fill_mandatory_checkOutDate_fields()</td>
+                <td>1</td>
+                <td class="duration" data-value="4760575477">4s 760ms</td>
+                <td class="duration" data-value="4760575477">4s 760ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">FlightSearchStepDefinitionsNew.i_select_option_radio_button(String)</td>
+                <td>3</td>
+                <td class="duration" data-value="792977117">792ms</td>
+                <td class="duration" data-value="264325705">264ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HomeStepDefinitionsNew.i_click_Login()</td>
+                <td>9</td>
+                <td class="duration" data-value="23445529959">23s 445ms</td>
+                <td class="duration" data-value="2605058884">2s 605ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HomeStepDefinitionsNew.open_browser_and_start_application(String,String)</td>
+                <td>9</td>
+                <td class="duration" data-value="69521748300">1m 9s 521ms</td>
+                <td class="duration" data-value="7724638700">7s 724ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_click_on_HOTELS_button()</td>
+                <td>2</td>
+                <td class="duration" data-value="2228363141">2s 228ms</td>
+                <td class="duration" data-value="1114181570">1s 114ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_click_on_HOTELS_option_in_the_search_table()</td>
+                <td>2</td>
+                <td class="duration" data-value="4591230001">4s 591ms</td>
+                <td class="duration" data-value="2295615000">2s 295ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_click_on_Search_button()</td>
+                <td>2</td>
+                <td class="duration" data-value="3456962676">3s 456ms</td>
+                <td class="duration" data-value="1728481338">1s 728ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_enter_numberOfGuests(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="390015425">390ms</td>
+                <td class="duration" data-value="390015425">390ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_see_HOTELS_page()</td>
+                <td>2</td>
+                <td class="duration" data-value="220684690">220ms</td>
+                <td class="duration" data-value="110342345">110ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_see_Hotels_search_results_on_hotel_search_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="57220745">057ms</td>
+                <td class="duration" data-value="57220745">057ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_see_error_message_to_fill_mandatory_date_field()</td>
+                <td>1</td>
+                <td class="duration" data-value="4733970941">4s 733ms</td>
+                <td class="duration" data-value="4733970941">4s 733ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_select_checkInDate_from_datePicker(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="398045401">398ms</td>
+                <td class="duration" data-value="398045401">398ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_select_checkOutDate_from_datePicker(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="663014603">663ms</td>
+                <td class="duration" data-value="663014603">663ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">HotelSearchStepDefinitionsNew.i_select_from_dropdown_menu(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5254118631">5s 254ms</td>
+                <td class="duration" data-value="5254118631">5s 254ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.click_LOGIN()</td>
+                <td>9</td>
+                <td class="duration" data-value="50042930467">50s 042ms</td>
+                <td class="duration" data-value="5560325607">5s 560ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.i_am_able_to_LogIn_successfully()</td>
+                <td>1</td>
+                <td class="duration" data-value="5154589875">5s 154ms</td>
+                <td class="duration" data-value="5154589875">5s 154ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.i_am_not_able_to_LogIn()</td>
+                <td>3</td>
+                <td class="duration" data-value="900307675">900ms</td>
+                <td class="duration" data-value="300102558">300ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.i_enter(String,String)</td>
+                <td>3</td>
+                <td class="duration" data-value="15545757544">15s 545ms</td>
+                <td class="duration" data-value="5181919181">5s 181ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.i_enter_valid_emailId_and_password(String,String)</td>
+                <td>6</td>
+                <td class="duration" data-value="31094151917">31s 094ms</td>
+                <td class="duration" data-value="5182358652">5s 182ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.i_see_error_message(String)</td>
+                <td>3</td>
+                <td class="duration" data-value="256346939">256ms</td>
+                <td class="duration" data-value="85448979">085ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.i_see_my_account_page()</td>
+                <td>6</td>
+                <td class="duration" data-value="30418084020">30s 418ms</td>
+                <td class="duration" data-value="5069680670">5s 069ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LogInStepDefinitionsNew.i_should_see_LogIn_page()</td>
+                <td>4</td>
+                <td class="duration" data-value="20486623093">20s 486ms</td>
+                <td class="duration" data-value="5121655773">5s 121ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ServiceHooksNew.endTest()</td>
+                <td>9</td>
+                <td class="duration" data-value="25912334319">25s 912ms</td>
+                <td class="duration" data-value="2879148257">2s 879ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ServiceHooksNew.initializeTest()</td>
+                <td>9</td>
+                <td class="duration" data-value="53207080619">53s 207ms</td>
+                <td class="duration" data-value="5911897846">5s 911ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>34</td>
+              <td>108</td>
+              <td class="duration">6m 26s 082ms</td>
+              <td class="duration">3s 574ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
