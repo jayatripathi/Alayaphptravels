@@ -16,11 +16,11 @@ public class HomeStepDefinitionsNew extends TestBaseNew {
 
 //		driver = TestBaseNew.selectBrowser(browserName);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(url);
 
-		Thread.sleep(3000);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		Thread.sleep(3000);
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 

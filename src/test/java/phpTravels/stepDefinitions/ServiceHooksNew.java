@@ -13,6 +13,7 @@ public class ServiceHooksNew {
 	public void initializeTest() {
 		testBaseNew = new TestBaseNew();
 		WebDriver driver = TestBaseNew.selectBrowser("firefox");
+		
 	}
 	
 	@After

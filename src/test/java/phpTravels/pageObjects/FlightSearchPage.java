@@ -45,11 +45,9 @@ public class FlightSearchPage {
 
 	@FindBy(xpath = "//input[@name='arrival']")
 	WebElement returnDateBox;
-	
+
 	@FindBy(xpath = "//form[@name='flightmanualSearch']/div/button[@type='submit']")
 	WebElement searchButton;
-	
-	
 
 	public void selectTripType(String tripType) {
 		if (tripType.contains("One")) {
@@ -63,7 +61,6 @@ public class FlightSearchPage {
 		Actions a = new Actions(driver);
 		a.moveToElement(fromCityBox);
 		a.click().sendKeys(fromCity).build().perform();
-		Thread.sleep(4000);
 		WebElement dropDownItem = driver.findElement(By.xpath("//div[@class='select2-result-label']"));
 		dropDownItem.click();
 	}
@@ -72,10 +69,9 @@ public class FlightSearchPage {
 		Actions a = new Actions(driver);
 		a.moveToElement(destinationCityBox);
 		a.click().sendKeys(destinationCity).build().perform();
-		Thread.sleep(4000);
 		WebElement dropDownItem = driver.findElement(By.xpath("//div[@class='select2-result-label']"));
 		dropDownItem.click();
-		
+
 	}
 
 	public void enterDepartureDate(String departureDate) throws InterruptedException {
@@ -89,13 +85,13 @@ public class FlightSearchPage {
 		returnDateBox.clear();
 		returnDateBox.sendKeys(returnDate);
 	}
-	
+
 	public void clickSearchButton() {
 		searchButton.click();
 	}
 
 	public void captureFlightsError(String tripType) throws InterruptedException, IOException {
-		Thread.sleep(4000);
+
 		File scr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		System.getProperty(System.getProperty(
 				"/Users/pranshudwivedi/Desktop/SeleniumTrainingByJitendra/Practice/SeleniumPracticals/phpTravels")

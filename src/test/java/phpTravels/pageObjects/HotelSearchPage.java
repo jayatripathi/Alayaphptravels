@@ -12,7 +12,6 @@ import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
 public class HotelSearchPage {
 	private WebDriver driver;
 
@@ -38,7 +37,7 @@ public class HotelSearchPage {
 	WebElement childrenNumberBox;
 
 	@FindBy(xpath = "//form[@name='fCustomHotelSearch']/div/button[@type='submit']")
-	
+
 	WebElement searchTab;
 
 	public HotelSearchPage(WebDriver driver) {
@@ -47,7 +46,6 @@ public class HotelSearchPage {
 	}
 
 	public void clickHotelsOptionInSearchTable() throws InterruptedException {
-		Thread.sleep(2000);
 		hotelsOptionInSearchTable.click();
 	}
 
@@ -55,7 +53,6 @@ public class HotelSearchPage {
 		Actions a = new Actions(driver);
 		a.moveToElement(cityNameBox);
 		a.click().sendKeys(cityName).build().perform();
-		Thread.sleep(4000);
 		WebElement dropDownItem = driver
 				.findElement(By.xpath("//ul[1]/li[1]/ul[1]/li[1]/div[@class='select2-result-label']"));
 		dropDownItem.click();
@@ -66,7 +63,7 @@ public class HotelSearchPage {
 		checkInDateBox.clear();
 		checkInDateBox.sendKeys(checkInDate);
 	}
-	
+
 	public void enterOutDate(String checkOutDate) throws InterruptedException {
 		checkOutDateBox.click();
 		checkOutDateBox.clear();
@@ -81,15 +78,17 @@ public class HotelSearchPage {
 
 	public void clickSearchTab() {
 		searchTab.click();
-	}	
-	
-	public void hotelSearchErrorCapture() throws IOException, InterruptedException{
-		Thread.sleep(4000);
-		File scr = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		System.getProperty(System.getProperty("/Users/pranshudwivedi/Desktop/SeleniumTrainingByJitendra/Practice/SeleniumPracticals/phpTravels")+"firstScr.jpg");
-FileHandler.copy(scr, new File(("/Users/pranshudwivedi/Desktop/SeleniumTrainingByJitendra/Practice/SeleniumPracticals/phpTravels")+("/src/test/java/screenShots/"+"hotelSearch.jpg")));
-	
-}
-	
-	
+	}
+
+	public void hotelSearchErrorCapture() throws IOException, InterruptedException {
+		File scr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		System.getProperty(System.getProperty(
+				"/Users/pranshudwivedi/Desktop/SeleniumTrainingByJitendra/Practice/SeleniumPracticals/phpTravels")
+				+ "firstScr.jpg");
+		FileHandler.copy(scr, new File(
+				("/Users/pranshudwivedi/Desktop/SeleniumTrainingByJitendra/Practice/SeleniumPracticals/phpTravels")
+						+ ("/src/test/java/screenShots/" + "hotelSearch.jpg")));
+
+	}
+
 }
